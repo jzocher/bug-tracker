@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Complete Bootstrap 4 Website Layout</title>
+	<title>Bug Tracker</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -12,62 +12,96 @@
 	<link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
     <meta name="description" content="This is a tool used for tracking bugs">
-    <title>
-        Bug Tracker
-    </title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
-        <div class="header">
-            <h1 class="titleText">Bug Tracker</h1>
-        </div>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark ssticky-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="logo.png"></a>
-                <a href="createform.html">Create</a> |
+                <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Create</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <br />
         <br />
     </header>
     <main>
-        <div class="search-container">
-            <form action="/action_page.php">
-                <div class="test">
-                    <input type="text" placeholder="Search..." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </div>
-            </form>
+        <div class="form-group pull-right">
+            <input type="text" class="search form-control" placeholder="What you looking for?">
+            <span class="counter"></span>
         </div>
         <br />
-        <div id="bugTable">
-            <table class="center">
-                <tr>
-                    <th>ID</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                    <th>Priority</th>
-                    <th>Status</th>
-                    <th>Created</th>
-                    <th>Author</th>
-                </tr>
-                <tr>
-                    <td>bug-1</td>
-                    <td>BUG</td>
-                    <td>There is a bug in the system</td>
-                    <td>High ^</td>
-                    <td>Unresolved</td>
-                    <td>07/31/2020</td>
-                    <td>jzocher</td>
-                </tr>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered results">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Created</th>
+                        <th scope="col">Creator</th>
+                    </tr>
+                    <tr class="warning no-result">
+                        <td colspan="7"><i class="fa fa-warning"></i> No result</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">bug-1</td>
+                        <td>BUG</td>
+                        <td>There is a bug in the system</td>
+                        <td>High ^</td>
+                        <td>Unresolved</td>
+                        <td>07/31/2020</td>
+                        <td>jzocher</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">bug-2</td>
+                        <td>BUG</td>
+                        <td>It just crashes</td>
+                        <td>High ^</td>
+                        <td>Unresolved</td>
+                        <td>07/29/2020</td>
+                        <td>jzocher</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">bug-3</td>
+                        <td>BUG</td>
+                        <td>It deletes all of my files</td>
+                        <td>High ^</td>
+                        <td>Unresolved</td>
+                        <td>05/23/1999</td>
+                        <td>Msmith</td>
+                    </tr>
+                </tbody>   
             </table>
         </div>
-    <main>
+    </main>
     <footer>
         <div class="footer">
 
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>

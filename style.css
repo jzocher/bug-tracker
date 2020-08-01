@@ -1,53 +1,47 @@
-.header, .footer {
-    color: #ffffff;
-    padding-top: 1%;
-    padding-left: 2%;
-    padding-bottom: 3%;
-    background-color: #0000ff;
-}
-
-nav {
-    text-align: center;
-}
-
-table, input {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-}
-
-.center {
-    margin-left:auto; 
-    margin-right:auto;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.test {
-    display: inline-block;
-    width: 80%;
-	text-align: center; 
-}
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222222;
+}
 
+.navbar {
+    padding: .8rem;
+}
 
+.navbar-nav li {
+    padding-right: 1.2rem;
+}
 
+.nav-link {
+    font-size: 1.1m !important;
+}
 
+.table {
+    width: 90%;
+    margin: auto;
+}
 
+.form-group {
+    width: 90%;
+    margin: auto;
+}
 
+.results tr[visible='false'],
+.no-result{
+  display:none;
+}
 
+.results tr[visible='true']{
+  display:table-row;
+}
 
-
+.counter{
+  padding:8px; 
+  color:#ccc;
+}
 
 /*---Media Queries --*/
 @media (max-width: 992px) {
