@@ -30,13 +30,10 @@
                             <a class="nav-link" href="#">Create</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="" class="nav-link" data-toggle="modal" data-target="#modalLoginForm">Login</a>
+                        </li>
+                        <li class="nav-item">
+                        <a href="" class=" nav-link" data-toggle="modal" data-target="#modalRegisterForm">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -46,11 +43,13 @@
         <br />
     </header>
     <main>
+        <!-- Search Bar -->
         <div class="form-group pull-right">
             <input type="text" class="search form-control" placeholder="What you looking for?">
             <span class="counter"></span>
         </div>
         <br />
+        <!-- Table -->
         <div class="table-responsive">
             <table class="table table-hover table-bordered table-sortable results">
                 <thead>
@@ -70,16 +69,16 @@
                 <tbody>
                     <tr>
                         <td scope="row">bug-1</td>
-                        <td>BUG</td>
+                        <td>Bug</td>
                         <td>There is a bug in the system</td>
-                        <td>High ^</td>
+                        <td>Medium -</td>
                         <td>Unresolved</td>
                         <td>07/31/2020</td>
                         <td>jzocher</td>
                     </tr>
                     <tr>
                         <td scope="row">bug-2</td>
-                        <td>BUG</td>
+                        <td>Bug</td>
                         <td>It just crashes</td>
                         <td>High ^</td>
                         <td>Unresolved</td>
@@ -88,12 +87,21 @@
                     </tr>
                     <tr>
                         <td scope="row">bug-3</td>
-                        <td>BUG</td>
+                        <td>Bug</td>
                         <td>It deletes all of my files</td>
                         <td>High ^</td>
                         <td>Unresolved</td>
                         <td>05/23/1999</td>
                         <td>Msmith</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">IMP-1</td>
+                        <td>Improvement</td>
+                        <td>Make things more better</td>
+                        <td>Low v</td>
+                        <td>In Progress</td>
+                        <td>08/01/2020</td>
+                        <td>jzocher</td>
                     </tr>
                 </tbody>   
             </table>
@@ -123,6 +131,40 @@
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <button class="btn btn-default">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Registration form -->
+        <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Register</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <i class="fas fa-user prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="orangeForm-name">Username</label>
+                            <input type="text" id="orangeForm-name" class="form-control validate">
+                        </div>
+                        <div class="md-form mb-5">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>                            
+                            <input type="email" id="orangeForm-email" class="form-control validate">
+                        </div>
+                        <div class="md-form mb-4">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">Password</label>
+                            <input type="password" id="orangeForm-pass" class="form-control validate">
+                            
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="orangeForm-pass">Re-type Password</label>
+                            <input type="password" id="orangeForm-pass" class="form-control validate">
+                        </div>
                     </div>
                 </div>
             </div>
