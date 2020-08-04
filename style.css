@@ -4,7 +4,8 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    color: #222222;
+    color: #000000;
+    background-color: #1A1F24;
 }
 
 .navbar {
@@ -41,6 +42,20 @@ html, body {
 .counter{
   padding:8px; 
   color:#ccc;
+}
+
+table.table-bordered{
+  border:1px solid #000000;
+}
+
+table.table-bordered > thead > tr > th{
+  border:1px solid #000000;
+  background-color: #6C747C;
+}
+
+table.table-bordered > tbody > tr > td{
+  border:1px solid #000000;
+  background-color: #FFFFFF;
 }
 
 .table-sortable th {
